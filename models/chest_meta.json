@@ -1,0 +1,7 @@
+{
+  "class_names": [
+    "NORMAL",
+    "PNEUMONIA"
+  ],
+  "accuracy": 0.8926281929016113
+}

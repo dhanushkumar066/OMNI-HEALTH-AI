@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background: #0d0b2e;
+    color: #e2e8f0;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  ::-webkit-scrollbar        { width: 5px; }
+  ::-webkit-scrollbar-track  { background: rgba(255,255,255,0.02); }
+  ::-webkit-scrollbar-thumb  { background: rgba(99,102,241,0.45); border-radius: 4px; }
+}
+
+@layer components {
+  /* ── Glassmorphism ── */
+  .glass {
+    background: rgba(255, 255, 255, 0.055);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
+    border: 1px solid rgba(255, 255, 255, 0.13);
+  }
+
+  /* ── Glow shadows ── */
+  .glow-indigo {
+    box-shadow:
+      0 0 30px rgba(99,102,241,0.25),
+      0 0 70px rgba(99,102,241,0.08);
+  }
+
+  .glow-teal {
+    box-shadow:
+      0 0 30px rgba(15,148,136,0.25),
+      0 0 70px rgba(15,148,136,0.08);
+  }
+
+  /* ── Skeleton loader ── */
+  .skeleton {
+    background: linear-gradient(
+      90deg,
+      rgba(255,255,255,0.05) 0%,
+      rgba(255,255,255,0.11) 50%,
+      rgba(255,255,255,0.05) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+}
